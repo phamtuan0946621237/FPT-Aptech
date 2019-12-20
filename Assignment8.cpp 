@@ -1,0 +1,60 @@
+#include <stdio.h>
+//const int MAX = 100;
+//
+//void NhapMang(int a[], int n){
+//    for(int i = 0;i < n; ++i){
+//        printf("\nNhap phan tu a[%d] = ", i);
+//        scanf("%d", &a[i]);
+//    }
+//}
+//
+//void XuatMang(int a[], int n){
+//    for(int i = 0;i < n; ++i){
+//        printf("\nPhan tu a[%d] = %d", i, a[i]);
+//    }
+//}
+//int apxepmang (int a[],unsigned int n,int mang){
+//    int c;
+//    for(int i=0;i<n;i++){
+//        if(mang == a[i]){
+//            c=i;
+//        }
+//    }
+//    printf("giá trị %d nằm ở vị trí số %d\n",mang,c);
+//    printf("có nằm trong mảng");
+//    return 1;
+//}
+//    int main(){
+//        int ary[MAX];
+//        int n;
+//        printf("nhập số n");
+//        scanf("%d",&n);
+//        NhapMang(ary,n);
+//        XuatMang(ary,n);
+//        int x;
+//        printf("Nhập số x ");
+//        scanf("%d",&x);
+//        apxepmang(ary,n,x);
+//
+//        return 0 ;
+//    }
+//2. Tìm số thứ n trong dãy số Fibonacci
+
+int timthutu(int n){
+    int a;
+    int x1=1,x2=1;
+    for(int i=3;i<=n;i++){
+        a=x1+x2;
+        x1=x2;
+        x2=a;
+    }
+    return a;
+}
+int main(){
+    int n;
+    printf("Nhập n ");
+    scanf("%d",&n);
+    timthutu(n);
+    printf("So Fibonacci thu %d la: %d", n, timthutu(n));
+    return 0;
+}
